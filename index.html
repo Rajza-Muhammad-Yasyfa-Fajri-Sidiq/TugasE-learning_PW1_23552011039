@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>King</title>
+
+  
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+   
+    body {
+      font-family: 'Quicksand', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: url('https://radarcirebon.disway.id/upload/9a1a95ba6d1510a10eacbf9b7848cabf.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+
+    .overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.45);
+      z-index: 0;
+    }
+
+ 
+    .container {
+      position: relative;
+      z-index: 1;
+      background: rgba(255, 255, 255, 0.93);
+      margin-top: 70px;
+      padding: 40px 50px;
+      border-radius: 20px;
+      max-width: 850px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      text-align: center;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #fff;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      margin-bottom: 20px;
+      transition: transform 0.5s ease;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.08) rotate(2deg);
+    }
+
+    h1 {
+      color: #1f3b73;
+      font-size: 2.4em;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: #444;
+      line-height: 1.7;
+      text-align: justify;
+      margin: 15px 0;
+      font-size: 1.05em;
+    }
+
+    button {
+      margin-top: 25px;
+      background-color: #1f3b73;
+      color: white;
+      padding: 12px 28px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    button:hover {
+      background-color: #132a54;
+      transform: scale(1.07);
+      box-shadow: 0 5px 18px rgba(31, 59, 115, 0.5);
+    }
+
+    #output {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #132a54;
+      font-size: 1.15em;
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 20px;
+      color: #fff;
+      font-size: 0.9em;
+      text-align: center;
+      z-index: 1;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="container">
+    <img src="assets/KING.jpeg"Foto Mahasiswa" class="profile-pic">
+
+    <h1><span style="color:#132a54;">Rajza Muhammad Yasyfa Fajri Sidiq</span></h1>
+
+    <p>Nama saya Rajza Muhammad Yasyfa Fajri Sidiq dengan NIM : 23552011039, Saya merupakan Mahasiswa di Universitas Teknologi Bandung Jurusan Teknik Informatika Fakultas Industri Kreatif</p>
+
+    <p>Saya punya dua hobi yang paling saya suka, yaitu main bola dan desain jersey. Main bola itu udah kayak bagian dari hidup, rasanya seru banget bisa lari di lapangan, ngejar bola, dan kerja sama sama tim. </p>
+
+    <p>Nah, dari situ juga muncul hobi kedua, yaitu jadi designer jersey. Saya suka banget bikin desain yang keren, unik, dan beda dari yang lain  apalagi kalau dipakai pas main, rasanya bangga banget. Dua hal ini saling nyambung, soalnya dari bola aku dapet inspirasi buat desain, dan dari desain aku makin semangat buat main.</p>
+
+    <button onclick="tampilkanWaktu()">🕒 Tampilkan Tanggal & Waktu</button>
+    <div id="output"></div>
+  </div>
+
+  <script>
+    function tampilkanWaktu() {
+      const now = new Date();
+      document.getElementById("output").innerHTML =
+        "⏰ Waktu saat ini: " + now.toLocaleString("id-ID");
+    }
+  </script>
+
+</body>
+</html>
